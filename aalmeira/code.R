@@ -1,6 +1,9 @@
-iris2 <- read.csv("~/GitHub/arepa_de_prueba/input/iris.csv")
+repo <- "/Users/upar/Downloads/arepa_de_prueba" # Paste path to local repository here
+path <- paste0(repo,"/input")
+iris2 <- read.csv(paste0(repo,"/input/iris.csv"))
 install.packages("haven")
 library(haven)
 write_dta(iris2, "~/GitHub/arepa_de_prueba/input/iris.dta")
 
-write_dta(iris2, "~/GitHub/arepa_de_prueba/input/iris_v2.dta")
+# Quick regression
+m1 <- lm('PetalWidth~ SepalWidth', data=iris2)
