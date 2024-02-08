@@ -1,4 +1,6 @@
-iris2 <- read.csv("~/GitHub/arepa_de_prueba/input/iris.csv")
+iris2 <- read.csv("input/iris.csv")
 install.packages("haven")
 library(haven)
 write_dta(iris2, "~/GitHub/arepa_de_prueba/input/iris.dta")
+
+str(iris2)
