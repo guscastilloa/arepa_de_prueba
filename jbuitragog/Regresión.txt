@@ -1,0 +1,1 @@
+\y_i=\beta_0+\beta_1 X_i+\varepsilom_i
