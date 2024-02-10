@@ -9,3 +9,19 @@ write_dta(iris2, "~/GitHub/arepa_de_prueba/input/iris.dta")
 # Quick regression
 m1 <- lm('PetalWidth~ SepalWidth', data=iris2)
 str(iris2)
+
+## install pacman
+if(!require(pacman)) install.packages("pacman") ; require(pacman)
+## require/install packages on this session
+p_load(rio, # import/export data
+       tidyverse, # tidy-data
+       skimr, # summary data
+       visdat, ## visualizing missing data
+       corrplot, ## Correlation Plots 
+       stargazer) ## tables/output to TEX. 
+
+# Quick scatter plot
+
+ggplot(data=iris2,
+       mapping=aes(x=SepalLength, y=PetalLength, group=as.factor(Name), color=as.factor(Name))) + geom_point() 
+
